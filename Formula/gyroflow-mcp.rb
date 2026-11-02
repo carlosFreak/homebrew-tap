@@ -1,19 +1,19 @@
 class GyroflowMcp < Formula
   desc "MCP server that stabilizes video with the Gyroflow CLI"
   homepage "https://github.com/carlosFreak/gyroflow-mcp"
-  version "0.3.0"
+  version "0.3.1"
   license "MIT"
 
   depends_on :macos
 
   on_arm do
-    url "https://github.com/carlosFreak/gyroflow-mcp/releases/download/v0.3.0/gyroflow-mcp-0.3.0-darwin-arm64.tar.gz"
-    sha256 "2835c51d005705373c120c098ea127845a7e3c1d626c2ad2b362672ff9b93d44"
+    url "https://github.com/carlosFreak/gyroflow-mcp/releases/download/v0.3.1/gyroflow-mcp-0.3.1-darwin-arm64.tar.gz"
+    sha256 "fd7a5e1163593ea3134caed6d01cc34d654136a8750ca1c66ce1176e47065429"
   end
 
   on_intel do
-    url "https://github.com/carlosFreak/gyroflow-mcp/releases/download/v0.3.0/gyroflow-mcp-0.3.0-darwin-amd64.tar.gz"
-    sha256 "7ab1f561f952e17258e26a2bd54007af5a78f2215f1fcdf79ecb87f5cc39c3ba"
+    url "https://github.com/carlosFreak/gyroflow-mcp/releases/download/v0.3.1/gyroflow-mcp-0.3.1-darwin-amd64.tar.gz"
+    sha256 "f362140bc9fea77db93c06782d1617150fd7068d2fac21ff90092d4bad99049d"
   end
 
   def install
