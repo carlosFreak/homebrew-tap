@@ -1,23 +1,30 @@
 class GyroflowMcp < Formula
   desc "MCP server that stabilizes video with the Gyroflow CLI"
   homepage "https://github.com/carlosFreak/gyroflow-mcp"
-  version "0.4.0"
+  version "0.4.1"
   license "MIT"
 
   depends_on :macos
 
   on_arm do
-    url "https://github.com/carlosFreak/gyroflow-mcp/releases/download/v0.4.0/gyroflow-mcp-0.4.0-darwin-arm64.tar.gz"
-    sha256 "2084d13811c35fe90b32d8817bbc7a1516c60e812782e723a44ab928718d84c6"
+    url "https://github.com/carlosFreak/gyroflow-mcp/releases/download/v0.4.1/gyroflow-mcp-0.4.1-darwin-arm64.tar.gz"
+    sha256 "851de8bec34a9e51f41ff0a8a1cae93f56c6ee047b1fceb0f047f657e5dcebd5"
   end
 
   on_intel do
-    url "https://github.com/carlosFreak/gyroflow-mcp/releases/download/v0.4.0/gyroflow-mcp-0.4.0-darwin-amd64.tar.gz"
-    sha256 "b732b88fd2733fbbcedd8239132a0b58685d6dc95cac650028678d05b90016c2"
+    url "https://github.com/carlosFreak/gyroflow-mcp/releases/download/v0.4.1/gyroflow-mcp-0.4.1-darwin-amd64.tar.gz"
+    sha256 "b6db14523baf470a0caddc939da6fd8d1297c9938976026f3028c5d68e45559a"
   end
 
   def install
     bin.install "gyroflow-mcp"
+  end
+
+  def caveats
+    <<~EOS
+      Color LUTs need ffmpeg, which is not installed automatically:
+        brew install ffmpeg
+    EOS
   end
 
   test do
